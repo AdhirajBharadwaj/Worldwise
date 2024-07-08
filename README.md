@@ -1,2 +1,0 @@
-# Worldwise
-Worldwise app
