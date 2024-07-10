@@ -45,13 +45,54 @@ async function getCity(id){
         
       }
     }
-   
+    async function createCity(newCity){
+      try{
+           setIsLoading(true);
+         const res=await fetch(`${URL}/cities/`,{
+          method: 'POST',
+          body: JSON.stringify(newCity),
+          headers: {
+            "Content-Type": "application/json",
+          },
+         });
+         const data=await res.json();
+         setCities(cities=>[...cities,data]); 
+        console.log(data);
+        }catch{
+         alert("error creating city")
+       }finally
+       {
+         setIsLoading(false);
+         
+       }
+     }
+     
+     async function deleteCity(id){
+      try{
+           setIsLoading(true);
+          const res=await fetch(`${URL}/cities/${id}`,{
+          method: 'DELETE',
+         
+         });
+         
+         setCities((cities)=>cities.filter((city)=>city.id!==id));
+        
+        }catch{
+         alert("error deleting city")
+       }finally
+       {
+         setIsLoading(false);
+         
+       }
+     }
 
 return (<CitiesContext.Provider value={{
     cities,
     isLoading,
     currentCity,
     getCity,
+    createCity,
+    deleteCity
 }}>
     {children}
 </CitiesContext.Provider>)
