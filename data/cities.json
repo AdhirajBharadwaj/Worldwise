@@ -1,16 +1,3 @@
 {
-  "cities": [
-    {
-      "id": "e616",
-      "cityName": "Jodhpur",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2024-07-10T23:24:55.362Z",
-      "notes": "sdas",
-      "position": {
-        "lat": "26.235017437106315",
-        "lng": "73.03171934543892"
-      }
-    }
-  ]
+  "cities": []
 }
