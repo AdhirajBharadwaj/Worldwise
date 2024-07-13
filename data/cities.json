@@ -1,3 +1,16 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "id": "b0f0",
+      "cityName": "Jorhat",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-01-01T13:55:53.000Z",
+      "notes": "HOME",
+      "position": {
+        "lat": "26.753166282490163",
+        "lng": "94.21335757196215"
+      }
+    }
+  ]
 }
